@@ -1,0 +1,84 @@
+{
+    "name": "adore-me/lib-fixtures",
+    "version": "1.0.3",
+    "description": "This is a library to generate fixtures in projects, for automated tests.",
+    "keywords": [
+        "adoreme",
+        "library",
+        "fixtures"
+    ],
+    "type": "library",
+    "license": "",
+    "authors": [
+        {
+            "name": "Cosmin Ardeleanu",
+            "email": "cosmin.a@adoreme.com"
+        },
+        {
+            "name": "AdoreMe Core-Team",
+            "email": "core-team@adoreme.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AdoreMe\\Library\\Fixtures\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/laravel/database/"
+        ],
+        "psr-4": {
+            "laravel\\AdoreMe\\Library\\Fixtures\\": "tests/laravel/app/",
+            "spec\\AdoreMe\\Library\\Fixtures\\": "tests/spec/",
+            "specIntrusive\\AdoreMe\\Library\\Fixtures\\": "tests/specIntrusive/"
+        }
+    },
+    "require": {
+        "laravel/framework": "5.4.*|5.5.*",
+        "laravel/tinker": "~1.0",
+        "adore-me/common": "^2"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^3.2",
+        "benconstable/phpspec-laravel": "^3.0",
+        "adore-me/logger": "^1",
+        "phpmd/phpmd": "^2.6",
+        "squizlabs/php_codesniffer": "*"
+    },
+    "scripts": {
+        "code-analysis": [
+            "./vendor/bin/phpcs --standard=PSR2 --report=checkstyle --report-file=build/reports/phpcs-checkstyle.xml src/",
+            "./vendor/bin/phpmd src/ xml phpmd.xml --reportfile build/reports/php-pmd.xml"
+        ],
+        "unit-tests": [
+            "./vendor/bin/phpspec run --format=junit > build/reports/phpspec-junit.xml"
+        ],
+        "full-check": [
+            "composer run code-analysis",
+            "composer run unit-tests"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:adore-me/common.git",
+            "no-api": true
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:adore-me/storage.git",
+            "no-api": true
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:adore-me/logger.git",
+            "no-api": true
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:adore-me/factory.git",
+            "no-api": true
+        }
+    ]
+}

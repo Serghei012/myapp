@@ -1,0 +1,74 @@
+{
+    "name": "adore-me/storage",
+    "version": "2.0.2",
+    "description": "This is a library of storage models used by AdoreMe",
+    "keywords": [
+        "adoreme",
+        "library",
+        "storage",
+        "redis",
+        "predis",
+        "phpredis",
+        "memcached",
+        "two-level-cache",
+        "redis-lua",
+        "redis-cache",
+        "php-static-variable"
+    ],
+    "type": "library",
+    "license": "",
+    "authors": [
+        {
+            "name": "Cosmin Ardeleanu",
+            "email": "cosmin.a@adoreme.com"
+        },
+        {
+            "name": "AdoreMe Core-Team",
+            "email": "core-team@adoreme.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AdoreMe\\Storage\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/laravel/database/"
+        ],
+        "psr-4": {
+            "laravel\\AdoreMe\\Storage\\": "tests/laravel/app/",
+            "spec\\AdoreMe\\Storage\\": "tests/spec/",
+            "specIntrusive\\AdoreMe\\Storage\\": "tests/specIntrusive/",
+            "benchmark\\AdoreMe\\Storage\\": "tests/benchmark/",
+            "laravel\\AdoreMe\\Common\\": "vendor/adore-me/common/tests/laravel/app/",
+            "fixtures\\AdoreMe\\Common\\": "vendor/adore-me/common/tests/fixtures/",
+            "spec\\AdoreMe\\Common\\": "vendor/adore-me/common/tests/spec/",
+            "specIntrusive\\AdoreMe\\Common\\": "vendor/adore-me/common/tests/specIntrusive/"
+        }
+    },
+    "require": {
+        "adore-me/common": "^2.0.5",
+        "predis/predis": "^1",
+        "illuminate/cache": "5.4.*",
+        "illuminate/redis": "5.4.*"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^3.2",
+        "laravel/framework": "5.4.*",
+        "laravel/tinker": "~1.0",
+        "benconstable/phpspec-laravel": "^3.0"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:adore-me/common.git",
+            "no-api": true
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:adore-me/logger.git",
+            "no-api": true
+        }
+    ]
+}

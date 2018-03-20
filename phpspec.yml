@@ -1,0 +1,11 @@
+suites:
+    main:
+        namespace: AdoreMe\MsTemplate
+        psr4_prefix: AdoreMe\MsTemplate
+        src_path: app
+        spec_path: tests
+
+laravel_extension:
+    testing_environment: 'testing'
+
+formatter.name: pretty

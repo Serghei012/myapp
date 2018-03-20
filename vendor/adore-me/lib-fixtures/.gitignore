@@ -1,0 +1,6 @@
+.idea/
+.DS_Store/
+vendor/
+composer.lock
+.phpstorm.meta.php
+_ide_helper.php

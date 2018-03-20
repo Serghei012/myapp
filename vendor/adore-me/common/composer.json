@@ -1,0 +1,54 @@
+{
+	"name": "adore-me/common",
+	"version": "2.0.18",
+	"description": "This is a library of common helpers, models, traits, etc, used by AdoreMe",
+	"keywords": [
+		"adoreme",
+		"library",
+		"common",
+		"helpers"
+	],
+	"type": "library",
+	"license": "",
+	"authors": [
+		{
+			"name": "Cosmin Ardeleanu",
+			"email": "cosmin.a@adoreme.com"
+		},
+		{
+			"name": "AdoreMe Core-Team",
+			"email": "core-team@adoreme.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"AdoreMe\\Common\\": "src/",
+			"stubs\\AdoreMe\\Common\\": "stubs/"
+		}
+	},
+	"autoload-dev": {
+		"classmap": [
+			"tests/laravel/database/"
+		],
+		"psr-4": {
+			"laravel\\AdoreMe\\Common\\": "tests/laravel/app/",
+			"fixtures\\AdoreMe\\Common\\": "tests/fixtures/",
+			"spec\\AdoreMe\\Common\\": "tests/spec/",
+			"specIntrusive\\AdoreMe\\Common\\": "tests/specIntrusive/"
+		}
+	},
+	"require": {
+		"illuminate/support": "5.4.*",
+		"nesbot/carbon": "1.*",
+		"illuminate/database": "5.4.*",
+		"illuminate/http": "5.4.*",
+		"illuminate/routing": "5.4.*",
+		"guzzlehttp/guzzle": "^6.2"
+	},
+	"require-dev": {
+		"phpspec/phpspec": "^3.2",
+		"laravel/framework": "5.4.*",
+		"laravel/tinker": "~1.0",
+		"benconstable/phpspec-laravel": "^3.0"
+	}
+}

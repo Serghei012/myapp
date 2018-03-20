@@ -1,0 +1,14 @@
+suites:
+    main:
+        namespace: AdoreMe\Storage
+        psr4_prefix: AdoreMe\Storage
+        src_path: src
+        spec_path: tests
+        spec_prefix: specIntrusive
+
+extensions:
+   PhpSpec\Laravel\Extension\LaravelExtension:
+        testing_environment: 'testing'
+        framework_path: '../tests/laravel/bootstrap/app.php'
+
+formatter.name: pretty

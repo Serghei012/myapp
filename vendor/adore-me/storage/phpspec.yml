@@ -1,0 +1,11 @@
+suites:
+    main:
+        namespace: AdoreMe\Storage
+        psr4_prefix: AdoreMe\Storage
+        src_path: src
+        spec_path: tests
+
+laravel_extension:
+    testing_environment: 'testing'
+
+formatter.name: pretty

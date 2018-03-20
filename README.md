@@ -1,2 +1,1 @@
-# myapp
-My app
+Kubernetes microservice POC

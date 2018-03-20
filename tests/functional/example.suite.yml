@@ -1,0 +1,4 @@
+gherkin:
+    contexts:
+        default:
+            - Contexts\GlobalProductContext

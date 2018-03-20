@@ -1,0 +1,46 @@
+{
+    "name": "adore-me/factory",
+    "version": "1.0.0",
+    "description": "This is a library with factory related helpers, interfaces and models, used by AdoreMe",
+    "keywords": [
+        "adoreme",
+        "library",
+        "factory"
+    ],
+    "type": "library",
+    "license": "",
+    "authors": [
+        {
+            "name": "Cosmin Ardeleanu",
+            "email": "cosmin.a@adoreme.com"
+        },
+        {
+            "name": "Alex Stanciu",
+            "email": "astanciu@adoreme.com"
+        },
+        {
+            "name": "AdoreMe Core-Team",
+            "email": "core-team@adoreme.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AdoreMe\\Factory\\": "src/"
+        }
+    },
+    "require": {
+        "adore-me/logger": "^1.0"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:adore-me/common.git",
+            "no-api": true
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:adore-me/logger.git",
+            "no-api": true
+        }
+    ]
+}

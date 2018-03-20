@@ -1,0 +1,45 @@
+{
+    "name": "adore-me/logger",
+    "version": "1.0.6",
+    "description": "This is a library of logger models used by AdoreMe",
+    "keywords": [
+        "adoreme",
+        "library",
+        "logger",
+        "monolog",
+        "sentry",
+        "slack",
+        "logstash",
+        "laravel"
+    ],
+    "type": "library",
+    "license": "",
+    "authors": [
+        {
+            "name": "Cosmin Ardeleanu",
+            "email": "cosmin.a@adoreme.com"
+        },
+        {
+            "name": "AdoreMe Core-Team",
+            "email": "core-team@adoreme.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AdoreMe\\Logger\\": "src/"
+        }
+    },
+    "require": {
+        "adore-me/common": "^1||^2",
+        "monolog/monolog": "^1.23",
+        "sentry/sentry-laravel": "0.6.*|0.7.*",
+        "laravel/framework": "5.4.*"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:adore-me/common.git",
+            "no-api": true
+        }
+    ]
+}
